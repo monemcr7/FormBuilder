@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Form Builder</title>
+    <link rel="icon" href="assets/img/icon.png" type="image/x-icon">
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+</head>
+
+<body>
+    <main>
+        <!-- Start Header -->
+        <header>
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt=""></a>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-align-justify" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="translate_wrapper">
+                        <div class="current_lang">
+                            <div class="lang">
+                                <img src="https://image.flaticon.com/icons/svg/299/299722.svg">
+                                <span class="lang-txt">EN</span>
+                                <span class="fa fa-chevron-down chevron"></span>
+                            </div>
+                        </div>
+                        <div class="more_lang">
+                            <div class="lang selected" data-value='en'>
+                                <img src="assets/img/299722.svg">
+                                <span class="lang-txt">English<span> (US)</span></span>
+                            </div>
+                            <div class="lang" data-value='fr'>
+                                <img src="assets/img//299753.svg">
+                                <span class="lang-txt">Français</span>
+                            </div>
+                            <div class="lang" data-value="ar">
+                                <img src="assets/img//299815.svg">
+                                <span class="lang-txt">العربية <span> (EG)</span></span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- End Header -->
+        
+        <div id="wrapper" class="form_builder toggled">
+            <!-- Start Sidebar -->
+            <div id="sidebar-wrapper" class="sidebar-content">
+                <div class="sidebar-header"><i class="fa fa-plus-square" aria-hidden="true"></i>
+                    <span class="textName header-text"></span></div>
+                <ul class="sidebar-nav">
+                    <li class="text-field-form">
+                        <a href="javascript:void(0)"><i class="fa fa-text-width" aria-hidden="true"></i> <span class="textName text"></span></a>
+                    </li>
+                    <li class="email-field-form">
+                        <a href="javascript:void(0)"><i class="fa fa-font-awesome" aria-hidden="true"></i> <span class="textName email-text"></span></a>
+                    </li>
+                    <li class="number-field-form">
+                        <a href="javascript:void(0)"><i class="fa fa-hashtag" aria-hidden="true"></i> <span class="textName num-text"></span></a>
+                    </li>
+                    <li class="password-field-form">
+                        <a href="javascript:void(0)"><i class="fa fa-eye-slash" aria-hidden="true"></i> <span class="textName pass-text"></span></a>
+                    </li>
+                    <li class="textarea-field-form">
+                        <a href="javascript:void(0)"><i class="fa fa-text-width" aria-hidden="true"></i> <span class="textName textarea-text"></span></a>
+                    </li>
+                    <li class="date-field-form">
+                        <a href="javascript:void(0)"><i class="fa fa-calendar" aria-hidden="true"></i> <span class="textName date-text"></span></a>
+                    </li>
+                    <li class="select-field-form">
+                        <a href="javascript:void(0)"><i class="fa fa-list-alt" aria-hidden="true"></i> <span class="textName select-text"></span></a>
+                    </li>
+                    <li class="checkbox-field-form">
+                        <a href="javascript:void(0)"><i class="fa fa-list" aria-hidden="true"></i> <span class="textName check-text"></span></a>
+                    </li>
+                    <li class="radio-field-form">
+                        <a href="javascript:void(0)"><i class="fa fa-list-ul" aria-hidden="true"></i> <span class="textName radio-text"></span></a>
+                    </li>
+                    <li class="upload-field-form">
+                        <a href="javascript:void(0)"><i class="fa fa-cloud-upload" aria-hidden="true"></i> <span class="textName upload-text"></span></a>
+                    </li>
+                    <li class="button-form">
+                        <a href="javascript:void(0)"><i class="fa fa-cogs" aria-hidden="true"></i> <span class="textName button-text"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Sidebar -->
+            
+            <!-- Start Page Content -->
+            <div id="page-content-wrapper">
+                <div class="container-fluid h-100">
+                    <div class="row h-100">
+                        <div class="col-lg-4 col-md-6 col-12 bal_builder h-100">
+                            <div class="form_builder_area"></div>
+                        </div>
+                        <div class="col-lg-8 col-md-6 col-12">
+                            <form class="form-horizontal">
+                                <div class="preview"></div>
+                                <div style="display: none" class="form-group plain_html"><textarea rows="50" class="form-control"></textarea></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <!-- End Page Content -->
+        </div>
+    </main>
+    
+    <!-- Start Loading -->
+    <div class="loading-overlay" id="loading">
+        <div id="loader_container">
+
+            <div id="bar_container">
+                <div id="progress_bar">
+                    <div id="progress_percentage">
+                        5%
+                    </div>
+                </div>
+            </div>
+            <div id="text_container">
+                Loading
+                <span>Please Wait...</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="assets/js/vendors/jquery.min.js"></script>
+    <script src="assets/js/vendors/jquery-ui.min.js"></script>
+    <script src="assets/js/vendors/bootstrap.min.js"></script>
+    <script src="assets/js/vendors/jquery-ui-touch-punch.js"></script>
+    <script src="assets/js/form-builder.js"></script>
+    <script src="assets/js/lang.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
